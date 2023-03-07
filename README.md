@@ -1,16 +1,16 @@
-# combat_losses
+# Combat Losses [![style: solid](https://img.shields.io/badge/style-solid-orange)](https://pub.dev/packages/solid_lints)
 
-A new Flutter project.
+This application show combat losses using API from [russianwarship](https://russianwarship.rip)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
++ Copy url - https://github.com/DenisManuch/CombatLosses
++ Create new git in your folder
++ Use command 'git clone' to clone this project using copied url
++ Enjoi
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## DEMO
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](https://imgur.com/a/CD6nK8G)
