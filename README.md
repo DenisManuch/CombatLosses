@@ -13,4 +13,4 @@ This application show combat losses using API from [russianwarship](https://russ
 
 ## DEMO
 
-![](https://imgur.com/a/CD6nK8G)
+<img src="https://raw.githubusercontent.com/DenisManuch/CombatLosses/8baff5949439d7b7339f548552d602ec1ea9f352/doc/combatLosses.gif" alt="gif" width="300" height="600">
