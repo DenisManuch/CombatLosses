@@ -19,10 +19,7 @@ class MarqueeWidget extends StatelessWidget {
           child: Marquee(
             textScaleFactor: marqueTextScale,
             text: rusWarshipGo,
-            style: const TextStyle(
-              fontFamily: 'Inter Bolt',
-              color: Colors.white,
-            ),
+            style: Theme.of(context).textTheme.labelMedium,
             scrollAxis: Axis.horizontal,
             velocity: marqueTextVelocity,
           ),

@@ -58,10 +58,10 @@ class CardInfoWidget extends StatelessWidget {
                           width: 5,
                         ),
                         if (losesItemChange == 0)
-                          const SizedBox()
+                          const Text('')
                         else
                           Text(
-                            '(+${losesItemChange.toString()})',
+                            '(+$losesItemChange)',
                             style: Theme.of(context).textTheme.bodyMedium,
                           ),
                       ],

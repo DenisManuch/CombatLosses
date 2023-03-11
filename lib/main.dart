@@ -62,6 +62,10 @@ class Main extends StatelessWidget {
             color: Colors.blue,
             letterSpacing: 0,
           ),
+          labelMedium: TextStyle(
+            fontFamily: interBoltFontFamily,
+            color: Colors.white,
+          ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(

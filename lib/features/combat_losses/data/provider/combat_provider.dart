@@ -8,7 +8,7 @@ class CombatProvider extends ChangeNotifier {
   ApiService apiService = ApiService();
 
   /// Combat Model
-  CombatModel modelData = CombatModel.empti();
+  CombatModel modelData = CombatModel.empty();
 
   /// Fetch All Data
   Future<void> fetchData() async {
