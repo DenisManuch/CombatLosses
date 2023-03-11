@@ -13,10 +13,7 @@ class BodyInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Stats losesItemValue =
-        Provider.of<CombatProvider>(context).modelData.data.stats;
-    final Increase losesItemChange =
-        Provider.of<CombatProvider>(context).modelData.data.increase;
+    final Data losesItem = Provider.of<CombatProvider>(context).modelData.data;
 
     return Padding(
       padding: const EdgeInsets.all(10.0),
@@ -25,86 +22,86 @@ class BodyInfoWidget extends StatelessWidget {
           CardInfoWidget(
             image: personnelIcon,
             title: personnelText,
-            losesItemValue: losesItemValue.personnelUnits,
-            losesItemChange: losesItemChange.personnelUnits,
+            losesItemValue: losesItem.stats.personnelUnits,
+            losesItemChange: losesItem.increase.personnelUnits,
           ),
           CardInfoWidget(
             image: tankIcon,
             title: tankText,
-            losesItemValue: losesItemValue.tanks,
-            losesItemChange: losesItemChange.tanks,
+            losesItemValue: losesItem.stats.tanks,
+            losesItemChange: losesItem.increase.tanks,
           ),
           CardInfoWidget(
             image: bbmIcon,
             title: bbmText,
-            losesItemValue: losesItemValue.armouredFightingVehicles,
-            losesItemChange: losesItemChange.armouredFightingVehicles,
+            losesItemValue: losesItem.stats.armouredFightingVehicles,
+            losesItemChange: losesItem.increase.armouredFightingVehicles,
           ),
           CardInfoWidget(
             image: artIcon,
             title: artText,
-            losesItemValue: losesItemValue.artillerySystems,
-            losesItemChange: losesItemChange.artillerySystems,
+            losesItemValue: losesItem.stats.artillerySystems,
+            losesItemChange: losesItem.increase.artillerySystems,
           ),
           CardInfoWidget(
             image: rszvIcon,
             title: rszvText,
-            losesItemValue: losesItemValue.mlrs,
-            losesItemChange: losesItemChange.mlrs,
+            losesItemValue: losesItem.stats.mlrs,
+            losesItemChange: losesItem.increase.mlrs,
           ),
           CardInfoWidget(
             image: ppoIcon,
             title: ppoText,
-            losesItemValue: losesItemValue.aaWarfareSystems,
-            losesItemChange: losesItemChange.aaWarfareSystems,
+            losesItemValue: losesItem.stats.aaWarfareSystems,
+            losesItemChange: losesItem.increase.aaWarfareSystems,
           ),
           CardInfoWidget(
             image: planeIcon,
             title: planeText,
-            losesItemValue: losesItemValue.planes,
-            losesItemChange: losesItemChange.planes,
+            losesItemValue: losesItem.stats.planes,
+            losesItemChange: losesItem.increase.planes,
           ),
           CardInfoWidget(
             image: helicopterIcon,
             title: helicopterText,
-            losesItemValue: losesItemValue.helicopters,
-            losesItemChange: losesItemChange.helicopters,
+            losesItemValue: losesItem.stats.helicopters,
+            losesItemChange: losesItem.increase.helicopters,
           ),
           CardInfoWidget(
             image: autoIcon,
             title: artText,
-            losesItemValue: losesItemValue.vehiclesFuelTanks,
-            losesItemChange: losesItemChange.vehiclesFuelTanks,
+            losesItemValue: losesItem.stats.vehiclesFuelTanks,
+            losesItemChange: losesItem.increase.vehiclesFuelTanks,
           ),
           CardInfoWidget(
             image: shipIcon,
             title: shipText,
-            losesItemValue: losesItemValue.warshipsCutters,
-            losesItemChange: losesItemChange.warshipsCutters,
+            losesItemValue: losesItem.stats.warshipsCutters,
+            losesItemChange: losesItem.increase.warshipsCutters,
           ),
           CardInfoWidget(
             image: bplaIcon,
             title: bplaText,
-            losesItemValue: losesItemValue.uavSystems,
-            losesItemChange: losesItemChange.uavSystems,
+            losesItemValue: losesItem.stats.uavSystems,
+            losesItemChange: losesItem.increase.uavSystems,
           ),
           CardInfoWidget(
             image: specialIcon,
             title: specialText,
-            losesItemValue: losesItemValue.specialMilitaryEquip,
-            losesItemChange: losesItemChange.specialMilitaryEquip,
+            losesItemValue: losesItem.stats.specialMilitaryEquip,
+            losesItemChange: losesItem.increase.specialMilitaryEquip,
           ),
           CardInfoWidget(
             image: trkIcon,
             title: trkText,
-            losesItemValue: losesItemValue.atgmSrbmSystems,
-            losesItemChange: losesItemChange.atgmSrbmSystems,
+            losesItemValue: losesItem.stats.atgmSrbmSystems,
+            losesItemChange: losesItem.increase.atgmSrbmSystems,
           ),
           CardInfoWidget(
             image: rocketIcon,
             title: rocketText,
-            losesItemValue: losesItemValue.cruiseMissiles,
-            losesItemChange: losesItemChange.cruiseMissiles,
+            losesItemValue: losesItem.stats.cruiseMissiles,
+            losesItemChange: losesItem.increase.cruiseMissiles,
           ),
         ],
       ),
