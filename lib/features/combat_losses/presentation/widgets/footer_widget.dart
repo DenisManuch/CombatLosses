@@ -1,4 +1,4 @@
-import 'package:combat_losses/src/constants.dart';
+import 'package:combat_losses/features/combat_losses/data/constants/text_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

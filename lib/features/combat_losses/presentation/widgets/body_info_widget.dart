@@ -1,7 +1,8 @@
-import 'package:combat_losses/src/constants.dart';
-import 'package:combat_losses/src/models/combat_model.dart';
-import 'package:combat_losses/src/provider/combat_provider.dart';
-import 'package:combat_losses/ui/widgets/card_info_widget.dart';
+import 'package:combat_losses/features/combat_losses/data/constants/icons_path_constants.dart';
+import 'package:combat_losses/features/combat_losses/data/constants/item_text_constants.dart';
+import 'package:combat_losses/features/combat_losses/data/provider/combat_provider.dart';
+import 'package:combat_losses/features/combat_losses/models/combat_model.dart';
+import 'package:combat_losses/features/combat_losses/presentation/widgets/card_info_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -18,6 +18,47 @@ class CombatModel {
     required this.message,
     required this.data,
   });
+  ///
+  factory CombatModel.empti() => CombatModel(
+    message: 'message',
+    data: Data(
+      date: DateTime.now(),
+      day: 1,
+      resource: "https://facebook.com",
+      stats: Stats(
+        personnelUnits: 0,
+        tanks: 0,
+        armouredFightingVehicles: 0,
+        artillerySystems: 0,
+        mlrs: 0,
+        aaWarfareSystems: 0,
+        planes: 0,
+        helicopters: 0,
+        vehiclesFuelTanks: 0,
+        warshipsCutters: 0,
+        cruiseMissiles: 0,
+        uavSystems: 0,
+        specialMilitaryEquip: 0,
+        atgmSrbmSystems: 0,
+      ),
+      increase: Increase(
+        personnelUnits: 0,
+        tanks: 0,
+        armouredFightingVehicles: 0,
+        artillerySystems: 0,
+        mlrs: 0,
+        aaWarfareSystems: 0,
+        planes: 0,
+        helicopters: 0,
+        vehiclesFuelTanks: 0,
+        warshipsCutters: 0,
+        cruiseMissiles: 0,
+        uavSystems: 0,
+        specialMilitaryEquip: 0,
+        atgmSrbmSystems: 0,
+      ),
+    ),
+  );
 ///
   factory CombatModel.fromRawJson(String str) =>
       CombatModel.fromJson(json.decode(str) as Map<String, dynamic>);

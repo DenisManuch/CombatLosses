@@ -1,5 +1,6 @@
-import 'package:combat_losses/src/provider/combat_provider.dart';
-import 'package:combat_losses/ui/screens/main_screen.dart';
+import 'package:combat_losses/core/constants/fonts_string_constants.dart';
+import 'package:combat_losses/features/combat_losses/data/provider/combat_provider.dart';
+import 'package:combat_losses/features/combat_losses/presentation/screens/combat_losses_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart' as provider;
 
@@ -27,35 +28,35 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         textTheme: const TextTheme(
           bodyLarge: TextStyle(
-            fontFamily: 'Benzin',
+            fontFamily: benzinFontFamily,
             fontSize: 19,
             color: Color.fromRGBO(32, 32, 35, 1),
           ),
           bodyMedium: TextStyle(
-            fontFamily: 'Benzin',
+            fontFamily: benzinFontFamily,
             fontSize: 14,
             color: Color.fromRGBO(32, 32, 35, 1),
           ),
           bodySmall: TextStyle(
             fontSize: 17,
-            fontFamily: 'Inter',
+            fontFamily: interFontFamily,
             color: Color.fromRGBO(32, 32, 35, 1),
           ),
           titleLarge: TextStyle(
-            fontFamily: 'Inter',
+            fontFamily: interFontFamily,
             fontSize: 18,
           ),
           titleMedium: TextStyle(
-            fontFamily: 'Inter',
+            fontFamily: interFontFamily,
             fontSize: 12,
           ),
           titleSmall: TextStyle(
-            fontFamily: 'Inter',
+            fontFamily: interFontFamily,
             fontSize: 12,
             fontWeight: FontWeight.bold,
           ),
           labelSmall: TextStyle(
-            fontFamily: 'Inter',
+            fontFamily: interFontFamily,
             fontSize: 12,
             fontWeight: FontWeight.bold,
             color: Colors.blue,
@@ -64,10 +65,12 @@ class Main extends StatelessWidget {
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-              fixedSize: const Size.fromHeight(15), padding: EdgeInsets.zero,),
+            fixedSize: const Size.fromHeight(15),
+            padding: EdgeInsets.zero,
+          ),
         ),
       ),
-      home: const MainScreen(),
+      home: const CombatLossesScreen(),
     );
   }
 }

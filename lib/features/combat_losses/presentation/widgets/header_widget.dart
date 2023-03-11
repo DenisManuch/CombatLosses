@@ -1,5 +1,7 @@
-import 'package:combat_losses/src/constants.dart';
-import 'package:combat_losses/src/provider/combat_provider.dart';
+import 'package:combat_losses/features/combat_losses/data/constants/path_constants.dart';
+import 'package:combat_losses/features/combat_losses/data/constants/size_constants.dart';
+import 'package:combat_losses/features/combat_losses/data/constants/text_constants.dart';
+import 'package:combat_losses/features/combat_losses/data/provider/combat_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
