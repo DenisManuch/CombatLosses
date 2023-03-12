@@ -1,5 +1,5 @@
 import 'package:combat_losses/core/constants/fonts_string_constants.dart';
-import 'package:combat_losses/features/combat_losses/data/provider/combat_provider.dart';
+import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
 import 'package:combat_losses/features/combat_losses/presentation/screens/combat_losses_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart' as provider;
@@ -8,9 +8,9 @@ void main() {
   runApp(
     provider.MultiProvider(
       providers: [
-        provider.ChangeNotifierProvider<CombatProvider>(
-          create: (_) => CombatProvider(),
-        )
+        provider.ChangeNotifierProvider<CombatLossesViewModel>(
+          create: (_) => CombatLossesViewModel(),
+        ),
       ],
       child: const Main(),
     ),

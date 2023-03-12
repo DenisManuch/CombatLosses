@@ -2,6 +2,7 @@ import 'package:combat_losses/features/combat_losses/data/constants/text_constan
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
 ///
 class FooterWidget extends StatelessWidget {
   ///

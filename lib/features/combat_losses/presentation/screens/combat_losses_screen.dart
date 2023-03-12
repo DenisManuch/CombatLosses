@@ -1,31 +1,15 @@
 import 'package:combat_losses/features/combat_losses/data/constants/colors_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/path_constants.dart';
-import 'package:combat_losses/features/combat_losses/data/provider/combat_provider.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/body_info_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/footer_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/header_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/marquee_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 
 ///
-class CombatLossesScreen extends StatefulWidget {
+class CombatLossesScreen extends StatelessWidget {
   ///
   const CombatLossesScreen({super.key});
-
-  @override
-  State<CombatLossesScreen> createState() => _CombatLossesScreenState();
-}
-
-class _CombatLossesScreenState extends State<CombatLossesScreen> {
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Provider.of<CombatProvider>(context, listen: false).fetchData();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

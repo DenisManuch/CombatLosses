@@ -1,7 +1,7 @@
 import 'package:combat_losses/features/combat_losses/data/constants/path_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/size_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/text_constants.dart';
-import 'package:combat_losses/features/combat_losses/data/provider/combat_provider.dart';
+import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -30,9 +30,11 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final resourceUrl =
-        Provider.of<CombatProvider>(context).modelData.data.resource;
-    final dateTime = Provider.of<CombatProvider>(context).modelData.data.date;
-    final int days = Provider.of<CombatProvider>(context).modelData.data.day;
+        context.select((CombatLossesViewModel vm) => vm.state.data.resource);
+    final dateTime =
+        context.select((CombatLossesViewModel vm) => vm.state.data.date);
+    final int days =
+        context.select((CombatLossesViewModel vm) => vm.state.data.day);
     final String formattedDate = DateFormat('d.MM').format(dateTime);
 
     return Padding(
