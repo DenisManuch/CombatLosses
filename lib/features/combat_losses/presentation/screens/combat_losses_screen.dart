@@ -13,6 +13,7 @@ class CombatLossesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: DecoratedBox(
           decoration: const BoxDecoration(
