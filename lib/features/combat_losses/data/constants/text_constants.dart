@@ -5,9 +5,6 @@ const String mainTittle = 'Загальні бойові втрати росій
 const String generalStaff = 'Генеральний штаб ЗС України інформує';
 
 ///
-const String wantMore = 'Бажаєш збільшити стату?';
-
-///
 const String urkPeople = '2022-2023 - Народ України';
 
 ///

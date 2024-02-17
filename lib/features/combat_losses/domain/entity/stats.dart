@@ -43,6 +43,9 @@ abstract class Stats {
   int atgmSrbmSystems;
 
   ///
+  int submarines;
+
+  ///
   Stats({
     required this.personnelUnits,
     required this.tanks,
@@ -58,5 +61,6 @@ abstract class Stats {
     required this.uavSystems,
     required this.specialMilitaryEquip,
     required this.atgmSrbmSystems,
+    required this.submarines,
   });
 }

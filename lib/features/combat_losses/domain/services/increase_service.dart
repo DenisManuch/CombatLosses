@@ -17,6 +17,7 @@ class IncreaseService extends Increase {
     required super.uavSystems,
     required super.specialMilitaryEquip,
     required super.atgmSrbmSystems,
+    required super.submarines,
   });
 
   ///
@@ -36,6 +37,7 @@ class IncreaseService extends Increase {
         uavSystems: json['uav_systems'] as int,
         specialMilitaryEquip: json['special_military_equip'] as int,
         atgmSrbmSystems: json['atgm_srbm_systems'] as int,
+        submarines: json['submarines'] as int,
       );
 
   ///
@@ -53,6 +55,7 @@ class IncreaseService extends Increase {
         cruiseMissiles: 0,
         uavSystems: 0,
         specialMilitaryEquip: 0,
-        atgmSrbmSystems: 0,
+        atgmSrbmSystems: 0, 
+        submarines: 0,
       );
 }

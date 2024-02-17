@@ -1,18 +1,28 @@
 import 'package:combat_losses/core/constants/fonts_string_constants.dart';
 import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
 import 'package:combat_losses/features/combat_losses/presentation/screens/combat_losses_screen.dart';
+import 'package:combat_losses/generated/codegen_loader.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart' as provider;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   runApp(
-    provider.MultiProvider(
-      providers: [
-        provider.ChangeNotifierProvider<CombatLossesViewModel>(
-          create: (_) => CombatLossesViewModel(),
-        ),
-      ],
-      child: const Main(),
+    EasyLocalization(
+      supportedLocales: const [Locale('en'), Locale('ua')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en'),
+      assetLoader: const CodegenLoader(),
+      child: provider.MultiProvider(
+        providers: [
+          provider.ChangeNotifierProvider<CombatLossesViewModel>(
+            create: (_) => CombatLossesViewModel(),
+          ),
+        ],
+        child: const Main(),
+      ),
     ),
   );
 }
@@ -24,7 +34,12 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //initializeDateFormatting('ua');
+    
     return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
         textTheme: const TextTheme(
           bodyLarge: TextStyle(

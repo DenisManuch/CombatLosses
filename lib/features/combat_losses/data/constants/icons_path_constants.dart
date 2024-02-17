@@ -40,3 +40,6 @@ const String trkIcon = 'assets/icons/trk.png';
 
 ///
 const String rocketIcon = 'assets/icons/rocket.png';
+
+///
+const String submarinesIcon = 'assets/icons/submarine.png';

@@ -43,6 +43,9 @@ abstract class Increase {
   int atgmSrbmSystems;
 
   ///
+  int submarines;
+
+  ///
   Increase({
     required this.personnelUnits,
     required this.tanks,
@@ -58,5 +61,6 @@ abstract class Increase {
     required this.uavSystems,
     required this.specialMilitaryEquip,
     required this.atgmSrbmSystems,
+    required this.submarines,
   });
 }

@@ -1,4 +1,5 @@
 import 'package:combat_losses/features/combat_losses/data/constants/size_constants.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 ///
@@ -75,7 +76,7 @@ class CardInfoWidget extends StatelessWidget {
                       maxLines: 1,
                       softWrap: false,
                       style: Theme.of(context).textTheme.bodySmall,
-                    )
+                    ).tr(),
                   ],
                 ),
               ),

@@ -1,7 +1,7 @@
 import 'package:combat_losses/features/combat_losses/data/constants/icons_path_constants.dart';
-import 'package:combat_losses/features/combat_losses/data/constants/item_text_constants.dart';
 import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/card_info_widget.dart';
+import 'package:combat_losses/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -21,87 +21,93 @@ class BodyInfoWidget extends StatelessWidget {
         children: [
           CardInfoWidget(
             image: personnelIcon,
-            title: personnelText,
+            title: LocaleKeys.personnel_text,
             losesItemValue: lossesItem.stats.personnelUnits,
             losesItemChange: lossesItem.increase.personnelUnits,
           ),
           CardInfoWidget(
             image: tankIcon,
-            title: tankText,
+            title: LocaleKeys.tank_text,
             losesItemValue: lossesItem.stats.tanks,
             losesItemChange: lossesItem.increase.tanks,
           ),
           CardInfoWidget(
             image: bbmIcon,
-            title: bbmText,
+            title: LocaleKeys.bbm_text,
             losesItemValue: lossesItem.stats.armouredFightingVehicles,
             losesItemChange: lossesItem.increase.armouredFightingVehicles,
           ),
           CardInfoWidget(
             image: artIcon,
-            title: artText,
+            title: LocaleKeys.art_text,
             losesItemValue: lossesItem.stats.artillerySystems,
             losesItemChange: lossesItem.increase.artillerySystems,
           ),
           CardInfoWidget(
             image: rszvIcon,
-            title: rszvText,
+            title: LocaleKeys.rszv,
             losesItemValue: lossesItem.stats.mlrs,
             losesItemChange: lossesItem.increase.mlrs,
           ),
           CardInfoWidget(
             image: ppoIcon,
-            title: ppoText,
+            title: LocaleKeys.ppo_text,
             losesItemValue: lossesItem.stats.aaWarfareSystems,
             losesItemChange: lossesItem.increase.aaWarfareSystems,
           ),
           CardInfoWidget(
             image: planeIcon,
-            title: planeText,
+            title: LocaleKeys.plane_text,
             losesItemValue: lossesItem.stats.planes,
             losesItemChange: lossesItem.increase.planes,
           ),
           CardInfoWidget(
             image: helicopterIcon,
-            title: helicopterText,
+            title: LocaleKeys.helicopter_text,
             losesItemValue: lossesItem.stats.helicopters,
             losesItemChange: lossesItem.increase.helicopters,
           ),
           CardInfoWidget(
             image: autoIcon,
-            title: artText,
+            title: LocaleKeys.art_text,
             losesItemValue: lossesItem.stats.vehiclesFuelTanks,
             losesItemChange: lossesItem.increase.vehiclesFuelTanks,
           ),
           CardInfoWidget(
             image: shipIcon,
-            title: shipText,
+            title: LocaleKeys.ship_text,
             losesItemValue: lossesItem.stats.warshipsCutters,
             losesItemChange: lossesItem.increase.warshipsCutters,
           ),
           CardInfoWidget(
             image: bplaIcon,
-            title: bplaText,
+            title: LocaleKeys.bpla_text,
             losesItemValue: lossesItem.stats.uavSystems,
             losesItemChange: lossesItem.increase.uavSystems,
           ),
           CardInfoWidget(
             image: specialIcon,
-            title: specialText,
+            title: LocaleKeys.special_text,
             losesItemValue: lossesItem.stats.specialMilitaryEquip,
             losesItemChange: lossesItem.increase.specialMilitaryEquip,
           ),
           CardInfoWidget(
             image: trkIcon,
-            title: trkText,
+            title: LocaleKeys.trk_text,
             losesItemValue: lossesItem.stats.atgmSrbmSystems,
             losesItemChange: lossesItem.increase.atgmSrbmSystems,
           ),
           CardInfoWidget(
             image: rocketIcon,
-            title: rocketText,
+            title: LocaleKeys.rocket_text,
             losesItemValue: lossesItem.stats.cruiseMissiles,
             losesItemChange: lossesItem.increase.cruiseMissiles,
+          ),
+          CardInfoWidget(
+            image: submarinesIcon,
+            title: LocaleKeys.submarines_text,
+            losesItemValue: lossesItem.stats.submarines,
+            losesItemChange: lossesItem.increase.submarines,
           ),
         ],
       ),

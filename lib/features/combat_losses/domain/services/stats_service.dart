@@ -18,6 +18,7 @@ class StatsService extends Stats {
     required super.uavSystems,
     required super.specialMilitaryEquip,
     required super.atgmSrbmSystems,
+    required super.submarines,
   });
 
   ///
@@ -36,8 +37,10 @@ class StatsService extends Stats {
         uavSystems: json['uav_systems'] as int,
         specialMilitaryEquip: json['special_military_equip'] as int,
         atgmSrbmSystems: json['atgm_srbm_systems'] as int,
+        submarines: json['submarines'] as int,
       );
-///
+
+  ///
   factory StatsService.empty() => StatsService(
         personnelUnits: 0,
         tanks: 0,
@@ -53,5 +56,6 @@ class StatsService extends Stats {
         uavSystems: 0,
         specialMilitaryEquip: 0,
         atgmSrbmSystems: 0,
+        submarines: 0,
       );
 }
