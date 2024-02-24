@@ -20,5 +20,6 @@ abstract class  LocaleKeys {
   static const generalstaff_text = 'generalstaff_text';
   static const urkpeople_text = 'urkpeople_text';
   static const asfor_text = 'asfor_text';
+  static const dayofwar_text = 'dayofwar_text';
 
 }

@@ -20,7 +20,6 @@ class MarqueeWidget extends StatelessWidget {
             textScaleFactor: marqueTextScale,
             text: rusWarshipGo,
             style: Theme.of(context).textTheme.labelMedium,
-            scrollAxis: Axis.horizontal,
             velocity: marqueTextVelocity,
           ),
         ),

@@ -1,7 +1,5 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-// ignore_for_file: prefer_single_quotes, avoid_renaming_method_parameters
-
 import 'dart:ui';
 
 import 'package:easy_localization/easy_localization.dart' show AssetLoader;
@@ -33,7 +31,8 @@ class CodegenLoader extends AssetLoader{
   "maintittle_text": "The total losses of the russian occupier",
   "generalstaff_text": "General Staff of the Armed Forces of Ukraine informs",
   "urkpeople_text": "2022-2023 - Ukrainian people",
-  "asfor_text": "As for "
+  "asfor_text": "As for ",
+  "dayofwar_text": "th day of war"
 };
 static const Map<String,dynamic> ua = {
   "personnel_text": "особового складу",
@@ -54,7 +53,8 @@ static const Map<String,dynamic> ua = {
   "maintittle_text": "Загальні бойові втрати російського окупанта",
   "generalstaff_text": "Генеральний штаб ЗС України інформує",
   "urkpeople_text": "2022-2023 - Народ України",
-  "asfor_text": "Станом на "
+  "asfor_text": "Станом на ",
+  "dayofwar_text": "-й день війни"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ua": ua};
 }

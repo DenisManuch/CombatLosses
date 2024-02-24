@@ -23,8 +23,8 @@ class HeaderWidget extends StatelessWidget {
 
   ///
   Future<void> _resUrl(String url) async {
-    final Uri _resUrlK = Uri.parse(url);
-    if (!await launchUrl(_resUrlK)) {
+    final Uri resUrlK = Uri.parse(url);
+    if (!await launchUrl(resUrlK)) {
       throw Exception('Could not launch $_resUrl');
     }
   }
@@ -37,9 +37,9 @@ class HeaderWidget extends StatelessWidget {
         context.select((CombatLossesViewModel vm) => vm.state.data.resource);
     final dateTime =
         context.select((CombatLossesViewModel vm) => vm.state.data.date);
-    final int days =
-        context.select((CombatLossesViewModel vm) => vm.state.data.day);
-        
+    final String days = context
+        .select((CombatLossesViewModel vm) => vm.state.data.day.toString());
+
     final String formattedDate = DateFormat('d.MM').format(dateTime);
 
     return Padding(
@@ -54,14 +54,14 @@ class HeaderWidget extends StatelessWidget {
                   LocaleKeys.generalstaff_text,
                   style: Theme.of(context).textTheme.titleMedium,
                 ).tr(),
-                   const SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
                   LocaleKeys.maintittle_text,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ).tr(),
-                 const SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -75,9 +75,13 @@ class HeaderWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '($days-й день війни)',
+                      ' $days',
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
+                    Text(
+                      LocaleKeys.dayofwar_text,
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ).tr(),
                   ],
                 ),
               ],
@@ -90,7 +94,7 @@ class HeaderWidget extends StatelessWidget {
                 scale: milIconScale,
               ),
               TextButton(
-                onPressed: () => _milUrl(),
+                onPressed: _milUrl,
                 child: Text(
                   milSite,
                   style: Theme.of(context).textTheme.labelSmall,

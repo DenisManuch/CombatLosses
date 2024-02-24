@@ -23,7 +23,7 @@ class FooterWidget extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           TextButton(
-            onPressed: () => _websparkUrl(),
+            onPressed: _websparkUrl,
             child: const Text(websparkName),
           ),
           Row(

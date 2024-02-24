@@ -18,7 +18,6 @@ class CombatLossesScreen extends StatelessWidget {
         child: DecoratedBox(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              scale: 1,
               image: AssetImage(bgPath),
               repeat: ImageRepeat.repeat,
             ),
