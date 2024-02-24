@@ -48,13 +48,6 @@ class LossesDateWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
-          if (loading)
-            const SizedBox()
-          else
-            const LinearProgressIndicator(
-            backgroundColor: bgBlue,
-            color: bgYellow,
-          ),
           CardInfoWidget(
             image: personnelIcon,
             title: LocaleKeys.personnel_text,

@@ -1,10 +1,12 @@
 import 'package:combat_losses/features/combat_losses/data/constants/colors_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/path_constants.dart';
+import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/body_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/footer_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/header_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/marquee_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 ///
 class CombatLossesScreen extends StatelessWidget {
@@ -39,6 +41,7 @@ class CombatLossesScreen extends StatelessWidget {
           child: ListView(
             children: const [
               MarqueeWidget(),
+              LoadingIndicator(),
               HeaderWidget(),
               BodyWidget(),
               FooterWidget(),
@@ -47,5 +50,24 @@ class CombatLossesScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+///
+class LoadingIndicator extends StatelessWidget {
+  ///
+  const LoadingIndicator({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final isLoading =
+        context.select((CombatLossesViewModel vm) => vm.state.isLoading);
+
+    return isLoading
+        ? const SizedBox()
+        : const LinearProgressIndicator(
+            backgroundColor: bgBlue,
+            color: bgYellow,
+          );
   }
 }

@@ -55,7 +55,7 @@ class CardInfoWidget extends StatelessWidget {
                         Countup(
                           begin: 0,
                           end: losesItemValue.toDouble(),
-                          duration: const Duration(seconds: 5),
+                          duration: const Duration(seconds: 2),
                           curve: Curves.decelerate,
                           separator: ',',
                           style: Theme.of(context).textTheme.bodyLarge,
@@ -66,9 +66,12 @@ class CardInfoWidget extends StatelessWidget {
                         if (losesItemChange == 0)
                           const Text('')
                         else
-                          Text(
-                            '(+$losesItemChange)',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                          Expanded(
+                            child: Text(
+                              '(+$losesItemChange)',
+                              style: Theme.of(context).textTheme.bodyMedium,
+                              overflow: TextOverflow.fade,
+                            ),
                           ),
                       ],
                     ),
