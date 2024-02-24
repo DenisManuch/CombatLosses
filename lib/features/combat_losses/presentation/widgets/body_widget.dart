@@ -1,4 +1,3 @@
-import 'package:combat_losses/features/combat_losses/data/constants/colors_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/icons_path_constants.dart';
 import 'package:combat_losses/features/combat_losses/domain/entity/data.dart';
 import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
