@@ -1,6 +1,6 @@
 import 'package:combat_losses/features/combat_losses/data/constants/colors_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/path_constants.dart';
-import 'package:combat_losses/features/combat_losses/presentation/widgets/body_info_widget.dart';
+import 'package:combat_losses/features/combat_losses/presentation/widgets/body_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/footer_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/header_widget.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/marquee_widget.dart';
@@ -40,7 +40,7 @@ class CombatLossesScreen extends StatelessWidget {
             children: const [
               MarqueeWidget(),
               HeaderWidget(),
-              BodyInfoWidget(),
+              BodyWidget(),
               FooterWidget(),
             ],
           ),

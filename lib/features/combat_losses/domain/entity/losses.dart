@@ -9,8 +9,12 @@ abstract class Losses {
   Data data;
 
   ///
+  bool isLoading;
+
+  ///
   Losses({
     required this.message,
     required this.data,
+    required this.isLoading,
   });
 }

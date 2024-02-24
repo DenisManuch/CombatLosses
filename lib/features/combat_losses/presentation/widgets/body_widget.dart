@@ -1,4 +1,6 @@
+import 'package:combat_losses/features/combat_losses/data/constants/colors_constants.dart';
 import 'package:combat_losses/features/combat_losses/data/constants/icons_path_constants.dart';
+import 'package:combat_losses/features/combat_losses/domain/entity/data.dart';
 import 'package:combat_losses/features/combat_losses/presentation/provider/combat_losses_view_model.dart';
 import 'package:combat_losses/features/combat_losses/presentation/widgets/card_info_widget.dart';
 import 'package:combat_losses/generated/locale_keys.g.dart';
@@ -6,19 +8,53 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 ///
-class BodyInfoWidget extends StatelessWidget {
+class BodyWidget extends StatelessWidget {
   ///
-  const BodyInfoWidget({super.key});
+  const BodyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     final lossesItem =
         context.select((CombatLossesViewModel vm) => vm.state.data);
 
+    final isLoading =
+        context.select((CombatLossesViewModel vm) => vm.state.isLoading);
+
+    return LossesDateWidget(
+      lossesItem: lossesItem,
+      loading: isLoading,
+    );
+  }
+}
+
+///
+class LossesDateWidget extends StatelessWidget {
+  ///
+  final Data lossesItem;
+
+  ///
+  final bool loading;
+
+  ///
+  const LossesDateWidget({
+    required this.lossesItem,
+    required this.loading,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
+          if (loading)
+            const SizedBox()
+          else
+            const LinearProgressIndicator(
+            backgroundColor: bgBlue,
+            color: bgYellow,
+          ),
           CardInfoWidget(
             image: personnelIcon,
             title: LocaleKeys.personnel_text,

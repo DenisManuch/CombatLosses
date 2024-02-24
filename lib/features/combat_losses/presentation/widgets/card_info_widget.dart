@@ -1,4 +1,5 @@
 import 'package:combat_losses/features/combat_losses/data/constants/size_constants.dart';
+import 'package:countup/countup.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -51,8 +52,12 @@ class CardInfoWidget extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(
-                          losesItemValue.toString(),
+                        Countup(
+                          begin: 0,
+                          end: losesItemValue.toDouble(),
+                          duration: const Duration(seconds: 5),
+                          curve: Curves.decelerate,
+                          separator: ',',
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         const SizedBox(
