@@ -31,14 +31,14 @@ class FooterWidget extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () => context.setLocale(
-                  const Locale('ua'),
+                  const Locale('uk', 'UA'),
                 ),
                 child: Text('UA', style: Theme.of(context).textTheme.bodySmall),
               ),
               Text('|', style: Theme.of(context).textTheme.bodySmall),
               TextButton(
                 onPressed: () => context.setLocale(
-                  const Locale('en'),
+                  const Locale('en', 'US'),
                 ),
                 child: Text('EN', style: Theme.of(context).textTheme.bodySmall),
               ),

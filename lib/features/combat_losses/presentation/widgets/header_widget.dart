@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+// import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 ///
 class HeaderWidget extends StatelessWidget {
@@ -74,6 +75,7 @@ class HeaderWidget extends StatelessWidget {
                         style: Theme.of(context).textTheme.labelSmall,
                       ),
                     ),
+                    ButtonWidget(),
                     Text(
                       ' $days',
                       style: Theme.of(context).textTheme.titleSmall,
@@ -104,6 +106,45 @@ class HeaderWidget extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class ButtonWidget extends StatelessWidget {
+  const ButtonWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Localizations.override(
+      context: context,
+      locale: Locale('en'),
+      child: Builder(
+        builder: (context) {
+          return ElevatedButton(
+      onPressed: () async {
+        DateTime? pickedDate = await showDatePicker(
+                      context: context,
+                       initialDate: DateTime.now(), //get today's date
+                      firstDate:DateTime(2000), //DateTime.now() - not to allow to choose before today.
+                      lastDate: DateTime(2101)
+                  );
+      },
+      child: const Text('sdf'),
+    );
+        },
+      ),
+    );
+  }
+}
+
+class DatePickerButtonWidget extends StatelessWidget {
+  const DatePickerButtonWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      child: const Text('sdf'),
     );
   }
 }

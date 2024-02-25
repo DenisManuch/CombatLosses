@@ -11,9 +11,9 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   runApp(
     EasyLocalization(
-      supportedLocales: const [Locale('en'), Locale('ua')],
+      supportedLocales: const [Locale('en', 'US'), Locale('uk', 'UA')],
       path: 'assets/translations',
-      fallbackLocale: const Locale('en'),
+      fallbackLocale: const Locale('uk'),
       assetLoader: const CodegenLoader(),
       child: provider.MultiProvider(
         providers: [
@@ -35,7 +35,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //initializeDateFormatting('ua');
-    
+    print(context.supportedLocales);
+
     return MaterialApp(
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,

@@ -1,5 +1,7 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
+// ignore_for_file: prefer_single_quotes, avoid_renaming_method_parameters
+
 import 'dart:ui';
 
 import 'package:easy_localization/easy_localization.dart' show AssetLoader;
@@ -12,7 +14,7 @@ class CodegenLoader extends AssetLoader{
     return Future.value(mapLocales[locale.toString()]);
   }
 
-  static const Map<String,dynamic> en = {
+  static const Map<String,dynamic> en_US = {
   "personnel_text": "personnel units",
   "tank_text": "tanks",
   "bbm_text": "AFV",
@@ -34,7 +36,7 @@ class CodegenLoader extends AssetLoader{
   "asfor_text": "As for ",
   "dayofwar_text": "th day of war"
 };
-static const Map<String,dynamic> ua = {
+static const Map<String,dynamic> uk_UA = {
   "personnel_text": "особового складу",
   "tank_text": "танків",
   "bbm_text": "ББМ",
@@ -56,5 +58,5 @@ static const Map<String,dynamic> ua = {
   "asfor_text": "Станом на ",
   "dayofwar_text": "-й день війни"
 };
-static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ua": ua};
+static const Map<String, Map<String,dynamic>> mapLocales = {"en_US": en_US, "uk_UA": uk_UA};
 }
